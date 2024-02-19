@@ -14,8 +14,16 @@
     padding: 150px 0;
   }
   &-content{
+    h6{
+      // color: #e36e00;
+      @include mobile{
+        // font-weight: bold;
+        margin-top: 70px;
+      }
+    }
     h1{
       margin-bottom: 75px;
+      // color: whitesmoke;
       @include desktop-lg{
         font-size: 50px;
         margin-bottom: 50px;
