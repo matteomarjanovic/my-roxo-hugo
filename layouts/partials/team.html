@@ -2,14 +2,22 @@
   {{ if .enable }}
   <section class="site-team">
     <div class="container">
-      <div class="row">
-        <div class="col-12">
+      <div class="site-about-description" style="width: 100%; padding-left: 0; text-align: justify; margin-bottom: 50px;">
+        <p>
+          Oggi, come probabilmente mai accaduto nella storia dell'uomo, ci stiamo rendendo conto di ciò che mangiamo, stiamo divenendo consapevoli, grazie all'informazione diffusa, che quello che introduciamo nel nostro corpo o che comunque arriva a noi sottoforma di cibo materiale, emotivo o intellettuale ha un'influenza incommensurabile sul nostro modo d'essere.
+        </p>
+        <p>
+          Ma seppur vi sia la consapevolezza dell'importanza del cibo, paradossalmente è questo un tempo in cui vi è grande disorientamento in tema di scelte alimentari. Si avverte perciò l'esigenza pregnante di capire, scoprire e indagare quale sia il “cibo”, il nutrimento per noi più adatto, al fine di poter vivere con serenità all'interno di un contesto sociale che parrebbe, non volere altro, che farci ingerire abnormi quantità di veleni. 
+        </p>
+      </div>
+      <div class="row" style="justify-content: center;">
+        <!-- <div class="col-12">
           <div class="section-title">
             <h2>
               {{ .title }}
             </h2>
           </div>
-        </div>
+        </div> -->
         {{ range .members }}
         <div class="col-lg-4 col-md-6">
           <div class="site-team-member">
@@ -20,9 +28,9 @@
               <h3>{{ .name }}</h3>
               <p>{{ .designation }}</p>
               <ul class="site-team-member-social">
-                <li><a href="{{ .medium | absURL }}"><i class="fa fa-medium"></i></a></li>
-                <li><a href="{{ .linkedin | absURL }}"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="{{ .instagram | absURL }}"><i class="fa fa-instagram"></i></a></li>
+                <!-- <li><a href="{{ .medium | absURL }}"><i class="fa fa-medium"></i></a></li> -->
+                <li><a href="{{ .linkedin | absURL }}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <!-- <li><a href="{{ .instagram | absURL }}"><i class="fa fa-instagram"></i></a></li> -->
               </ul>
             </div>
           </div>

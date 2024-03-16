@@ -11,7 +11,7 @@
           <div class="site-project-single-description">
             {{ .Content }}
           </div>
-          <div class="site-project-single-image">
+          <div class="site-project-single-image" style="justify-content: center;">
             {{ range .Params.project_images }}
             <img src="{{ . | absURL }}" alt="project image">
             {{ end }}
