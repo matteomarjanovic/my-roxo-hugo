@@ -29,11 +29,20 @@
         <div class="section-title">
           <h2>{{ . }}</h2>
           {{ end }}
-          <p style="font-size: x-large; margin-top: 50px;">{{ .Params.expertise_subtitle }}</p>
+          <p style="font-size: x-large; margin-top: 50px;">
+            <!-- {{ .Params.expertise_subtitle }} -->
+            A seguito di un'accurata valutazione dello stato di salute e delle abitudini alimentari, alla persona verrà consegnato un <b>piano alimentare</b>.
+            Il piano alimentare elaborato sarà "di mantenimento" oppure "terapeutico".<br><br>
+            Il piano alimentare di <b>mantenimento</b> consiste in un regime personalizzato che va a migliorare l'alimentazione della persona senza apportare restrizioni caloriche o cambiamenti nella frequenza dei pasti o eliminazione di specifici alimenti/nutrienti.<br><br>
+            Viceversa, qualora dovessero esservi i presupposti, l'alimentazione potrà essere utilizzata per fini "<b>terapeutici</b>" facendo ricorso a pratiche come la restrizione calorica, l'esclusione di determinati nutrienti (es. alimentazione chetogenica), oppure la riduzione della finestra temporale entro cui consumare i pasti giornalieri (es. digiuno intermittente). Il piano alimentare terapeutico differisce inoltre dal piano alimentare di mantenimento per la durata limitata che ha nel tempo.
+          </p>
         </div>
       </div>
       <div class="col-md-6">
         <ul class="site-expertise-list">
+          <p style="font-size: x-large; margin-top: 50px; font-weight: 300;">
+            Elaboro alimentazioni personalizzate per il trattamento o la prevenzione di:
+          </p>
           {{ range .Params.expertise_sectors }}
           <li>{{ . }}</li>
           {{ end }}
