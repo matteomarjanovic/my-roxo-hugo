@@ -9,7 +9,8 @@
         <br />
         <p style="font-size: x-large;">
           Ricevo su appuntamento presso lo studio in
-          <a href="https://www.google.com/maps/place/Via+Giacomo+Matteotti,+1,+37064+Povegliano+Veronese+VR,+Italia/@45.3493012,10.8835294,17z/data=!3m1!4b1!4m6!3m5!1s0x4781de569465a171:0x4561875b5a472bf7!8m2!3d45.3492975!4d10.8861043!16s%2Fg%2F11c5k3hv49?authuser=0&entry=ttu" target="_blank">
+          <a href="https://www.google.com/maps/place/Via+Giacomo+Matteotti,+1,+37064+Povegliano+Veronese+VR,+Italia/@45.3493012,10.8835294,17z/data=!3m1!4b1!4m6!3m5!1s0x4781de569465a171:0x4561875b5a472bf7!8m2!3d45.3492975!4d10.8861043!16s%2Fg%2F11c5k3hv49?authuser=0&entry=ttu"
+            target="_blank">
             <span style="color: black;">
               Via Matteotti 1, Povegliano Veronese, 37064
             </span>
@@ -32,21 +33,25 @@
       <div class="col-lg-6 ml-auto">
         <div class="site-contact-form">
           <h4>{{ .Params.form_heading }}</h4>
-          <form id="contact-form" action="{{ .Site.Params.fabform }}" method="post">
+          <form id="contact-form">
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="first-name" id="first-name" placeholder="{{ .Site.Params.contactForm.placeholder_first_name }}" required>
+                <input type="text" class="form-control" name="first_name" id="first-name"
+                  placeholder="{{ .Site.Params.contactForm.placeholder_first_name }}" required>
               </div>
               <div class="col-lg-6">
-                <input type="text" class="form-control" name="last-name" id="last-name" placeholder="{{ .Site.Params.contactForm.placeholder_last_name }}" required>
+                <input type="text" class="form-control" name="last_name" id="last-name"
+                  placeholder="{{ .Site.Params.contactForm.placeholder_last_name }}" required>
               </div>
               <div class="col-lg-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="{{ .Site.Params.contactForm.placeholder_email }}" required>
+                <input type="email" class="form-control" name="email" id="email"
+                  placeholder="{{ .Site.Params.contactForm.placeholder_email }}" required>
               </div>
               <div class="col-lg-6">
                 <div class="select-wrapper">
-                  <select class="form-control" id="projectType" name="project-type" required>
-                    <option value="" selected disabled hidden>{{ .Site.Params.contactForm.placeholder_project_type }}</option>
+                  <select class="form-control" id="projectType" name="project_type" required>
+                    <option value="" selected disabled hidden>{{ .Site.Params.contactForm.placeholder_project_type }}
+                    </option>
                     {{ range .Site.Params.contactForm.projectType }}
                     <option value="{{ .value }}">{{ .title }}</option>
                     {{ end }}
@@ -54,7 +59,8 @@
                 </div>
               </div>
               <div class="col-12">
-                <textarea class="form-control" id="aboutProject" name="about-project" rows="6" placeholder="{{ .Site.Params.contactForm.placeholder_about_the_project }}"></textarea>
+                <textarea class="form-control" id="aboutProject" name="about_project" rows="6"
+                  placeholder="{{ .Site.Params.contactForm.placeholder_about_the_project }}"></textarea>
               </div>
               <div class="col-12">
                 <button formtarget="_blank" type="submit" class="btn btn-primary" id="contact-form-button">
@@ -68,9 +74,9 @@
               <p id="contact-form-status"></p>
             </div>
           </form>
-          <p class="contact-form-generator">
+          <!-- <p class="contact-form-generator">
           <a href="https://fabform.io/" target="_blank">form backend service</a>
-          </p>
+          </p> -->
         </div>
       </div>
     </div>
