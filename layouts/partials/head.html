@@ -49,8 +49,12 @@
         emailjs.sendForm('service_1rnejwo', 'template_x6btn69', this)
           .then(function () {
             console.log('SUCCESS!');
+            document.getElementById("contact-form").reset();
+            document.getElementById("contact-form-button").style = "display: none ";
+            document.getElementById("contact-form-status").innerHTML = "Grazie! Ho ricevuto la richiesta, risponderò quanto prima.";
           }, function (error) {
             console.log('FAILED...', error);
+            status.innerHTML = "Oops! C'è stato un problema, la prego di riprovare.";
           });
       });
     }
